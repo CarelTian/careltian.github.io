@@ -5,7 +5,7 @@
 
 RPA框架是机器人过程自动化(RPA)的开源库和工具的集合，它被设计为与Robot Framework和Python一起使用。目标是为软件机器人开发人员提供良好的文档和积极维护的核心库。相比较于纯python实现，它的使用逻辑清晰，使用方法简单，可扩展性高。但是在某些特殊场景，Robot Framework具有局限性，比如并发执行，直接接管浏览器而不需要重新打开。
 
-以下Robot  Framework简称RF。RF的应用分为两种，一个是为公司解放劳动力，自动化处理简单但又繁琐的操作。二是为个人使用，现电商抢购活动还有秒杀抢单我怀疑完全可以用RF实现的，只要网速够快，并且成功破解了验证码是没有人能抢过它的。
+以下Robot  Framework简称RF。RF的应用分为两种，一个是为公司解放劳动力，自动化处理简单但又繁琐的操作。二是为个人使用，现电商抢购活动还有秒杀抢单我认为完全可以用RF实现的。
 
 # RF准备工作
 
@@ -24,7 +24,7 @@ RF实体是一个.robot文件，pycharm的插件有点问题，而且不能识�
 
 需要准备的插件如下所示
 
-![图一](../images/RF_1.png)
+![图一](/img/RF_1.png)
 
 # RF结构
 
@@ -93,7 +93,7 @@ END
 
 RF导入python的库就像直接实例化一个类，运行构造参数，如下图所示。
 
-![图二](../images/RF_2.png)
+![图二](/img/RF_2.png)
 
 @library装饰器
 配置实现为类的库的一种简单方法是使用robot.api.deco.library类装饰器。它允许配置库的作用域、版本、自定义参数转换器、文档格式和监听器，可选参数scope、version、converter、doc_format和监听器。当使用这些参数时，它们会自动设置匹配的ROBOT_LIBRARY_SCOPE、ROBOT_LIBRARY_VERSION、ROBOT_LIBRARY_CONVERTERS、ROBOT_LIBRARY_DOC_FORMAT和ROBOT_LIBRARY_LISTENER属性
@@ -104,7 +104,7 @@ RF导入python的库就像直接实例化一个类，运行构造参数，如下
 
 默认情况下，一个python类或模块下的所有函数被认为是Keyword。如果在设置中使用下图设置，默认不配置为keyword。函数的前缀可以使用@keyword开启。
 
-![图三](../images/RF_3.png)
+![图三](../img/RF_3.png)
 
 或者直接使用@not_keyword禁用RF。
 

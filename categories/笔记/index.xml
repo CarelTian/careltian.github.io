@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>主题文档 - Sky0x7d1</title>
-    <link>https://careltian.github.io/posts/doc/</link>
+    <title>笔记 - 分类 - Sky0x7d1</title>
+    <link>https://careltian.github.io/categories/%E7%AC%94%E8%AE%B0/</link>
     <description>This is my new Hugo FixIt site</description>
     <generator>Hugo 0.142.0 &amp; FixIt v0.3.17-8b402129</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://careltian.github.io/posts/doc/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://careltian.github.io/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RF学习总结</title>
       <link>https://careltian.github.io/posts/doc/rf/</link>
