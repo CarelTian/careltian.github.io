@@ -98,5 +98,5 @@ iptables -A mylink -j DROP
 ---
 
 > 作者: ZergFlood  
-> URL: http://localhost:1313/posts/doc/iptables/  
+> URL: https://careltian.github.io/posts/doc/iptables/  
 
