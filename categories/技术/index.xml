@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 - 分类 - Sky0x7d1</title>
+    <link>http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/</link>
+    <description>This is my new Hugo FixIt site</description>
+    <generator>Hugo 0.142.0 &amp; FixIt v0.3.17-8b402129</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iptables屏蔽所有国外IP!网络安全的利器！</title>
+      <link>http://localhost:1313/posts/doc/iptables/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/doc/iptables/</guid>
+      <category domain="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      <description>&lt;h2 id=&#34;iptables简介&#34; class=&#34;heading-element&#34;&gt;&lt;span&gt;iptables简介&lt;/span&gt;&#xA;  &lt;a href=&#34;#iptables%e7%ae%80%e4%bb%8b&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;netfilter/iptables（简称为iptables）组成Linux平台下的包过滤防火墙，与大多数的Linux软件一样，这个包过滤防火墙是免费的，它可以代替昂贵的商业防火墙解决方案，完成封包过滤、封包重定向和网络地址转换（NAT）等功能。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RF学习总结</title>
+      <link>http://localhost:1313/posts/doc/rf/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/doc/rf/</guid>
+      <category domain="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      <description>&lt;h2 id=&#34;robot--framework简介&#34; class=&#34;heading-element&#34;&gt;&lt;span&gt;Robot  Framework简介&lt;/span&gt;&#xA;  &lt;a href=&#34;#robot--framework%e7%ae%80%e4%bb%8b&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;RPA框架是机器人过程自动化(RPA)的开源库和工具的集合，它被设计为与Robot Framework和Python一起使用。目标是为软件机器人开发人员提供良好的文档和积极维护的核心库。相比较于纯python实现，它的使用逻辑清晰，使用方法简单，可扩展性高。但是在某些特殊场景，Robot Framework具有局限性，比如并发执行，直接接管浏览器而不需要重新打开。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
