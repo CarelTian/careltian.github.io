@@ -104,7 +104,7 @@ RF导入python的库就像直接实例化一个类，运行构造参数，如下
 
 默认情况下，一个python类或模块下的所有函数被认为是Keyword。如果在设置中使用下图设置，默认不配置为keyword。函数的前缀可以使用@keyword开启。
 
-![图三](../img/RF_3.png)
+![图三](/img/RF_3.png)
 
 或者直接使用@not_keyword禁用RF。
 
