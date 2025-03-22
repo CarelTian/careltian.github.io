@@ -6,16 +6,8 @@
     <description>This is my new Hugo FixIt site</description>
     <generator>Hugo 0.142.0 &amp; FixIt v0.3.17-8b402129</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://careltian.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ZFS——基于微服务的分布式文件系统</title>
-      <link>https://careltian.github.io/posts/doc/zfs/</link>
-      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://careltian.github.io/posts/doc/zfs/</guid>
-      <category domain="https://careltian.github.io/categories/%E9%A1%B9%E7%9B%AE/">项目</category>
-      <description>&lt;h2 id=&#34;背景&#34; class=&#34;heading-element&#34;&gt;&lt;span&gt;背景&lt;/span&gt;&#xA;  &lt;a href=&#34;#%e8%83%8c%e6%99%af&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&lt;p&gt;最近读了很多关于分布式系统的论文，于是想自己做一个分布式系统的项目练练手。在国内通常使用Java做企业级分布式架构语言，因为互联网早期是以阿里建立的Java体系来发展的，框架技术比较成熟。本人不喜欢Java，主要原因是开发比较臃肿需要下载和配置各种复杂的依赖，其次各种培训机构也是鼓吹培训Java。我认为编程语言对于开发是无关紧要的，重要的在于架构设计，业务逻辑，敏捷开发。Golang是一种轻量级，适合云原生开发的语言，因此我打算使用Golang做一个基于微服务的分布式文件系统。主要的技术栈有etcd作为注册中心, Mysql保存元数据, NATS作为消息队列，gRPC作为RPC框架，最后使用Docker，K8s容器化和编排。另外可能会考虑使用多叉树做文件查询视图。&lt;/p&gt;&#xA;&lt;h2 id=&#34;未完待续&#34; class=&#34;heading-element&#34;&gt;&lt;span&gt;未完待续&lt;/span&gt;&#xA;  &lt;a href=&#34;#%e6%9c%aa%e5%ae%8c%e5%be%85%e7%bb%ad&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;</description>
-    </item>
     <item>
       <title>【论文阅读】Spanner</title>
       <link>https://careltian.github.io/posts/doc/spanner/</link>
