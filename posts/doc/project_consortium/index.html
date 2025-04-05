@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <style>
+      :root {
+        --background-light: url('/images/day.jpg');
+        --background-dark: url('/images/dark.jpg');
+      }
+    </style>
+    <title>基于联盟链虚拟财产跨平台交易架构 - Sky0x7d1</title><meta name="author" content="ZergFlood">
+<meta name="description" content="背景 这个项目主要是区块链的练手项目，底层中实现了根据椭圆曲线密码学原理转化为base58编码的地址，交易及区块的序列化和反序列化，联盟链的共识协议，数据的持久化，文件的网络传输方法等等。后端使用的是python 3.9, Django 3.2.13，前端使用的是Vue3。其他框架使用较少，本项目主要以造轮子为主。
+"><meta name="keywords" content='229, 136, 134, 229, 184, 131, 229, 188, 143, 231, 179, 187, 231, 187, 159'>
+  <meta itemprop="name" content="基于联盟链虚拟财产跨平台交易架构">
+  <meta itemprop="description" content="背景 这个项目主要是区块链的练手项目，底层中实现了根据椭圆曲线密码学原理转化为base58编码的地址，交易及区块的序列化和反序列化，联盟链的共识协议，数据的持久化，文件的网络传输方法等等。后端使用的是python 3.9, Django 3.2.13，前端使用的是Vue3。其他框架使用较少，本项目主要以造轮子为主。">
+  <meta itemprop="datePublished" content="2025-03-27T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-27T00:00:00+00:00">
+  <meta itemprop="wordCount" content="25">
+  <meta itemprop="keywords" content="分布式系统"><meta property="og:url" content="https://careltian.github.io/posts/doc/project_consortium/">
+  <meta property="og:site_name" content="Sky0x7d1">
+  <meta property="og:title" content="基于联盟链虚拟财产跨平台交易架构">
+  <meta property="og:description" content="背景 这个项目主要是区块链的练手项目，底层中实现了根据椭圆曲线密码学原理转化为base58编码的地址，交易及区块的序列化和反序列化，联盟链的共识协议，数据的持久化，文件的网络传输方法等等。后端使用的是python 3.9, Django 3.2.13，前端使用的是Vue3。其他框架使用较少，本项目主要以造轮子为主。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-27T00:00:00+00:00">
+    <meta property="article:tag" content="分布式系统">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="基于联盟链虚拟财产跨平台交易架构">
+  <meta name="twitter:description" content="背景 这个项目主要是区块链的练手项目，底层中实现了根据椭圆曲线密码学原理转化为base58编码的地址，交易及区块的序列化和反序列化，联盟链的共识协议，数据的持久化，文件的网络传输方法等等。后端使用的是python 3.9, Django 3.2.13，前端使用的是Vue3。其他框架使用较少，本项目主要以造轮子为主。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="img/profile1.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://careltian.github.io/posts/doc/project_consortium/" title="基于联盟链虚拟财产跨平台交易架构 - Sky0x7d1" /><link rel="prev" type="text/html" href="https://careltian.github.io/posts/doc/eth/" title="ETH搭建联盟链的方法" /><link rel="alternate" type="text/markdown" href="https://careltian.github.io/posts/doc/project_consortium/index.md" title="基于联盟链虚拟财产跨平台交易架构 - Sky0x7d1"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "基于联盟链虚拟财产跨平台交易架构",
+    "inLanguage": "zh-cn",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/careltian.github.io\/posts\/doc\/project_consortium\/"
+    },"genre": "posts","keywords": "229, 136, 134, 229, 184, 131, 229, 188, 143, 231, 179, 187, 231, 187, 159","wordcount":  25 ,
+    "url": "https:\/\/careltian.github.io\/posts\/doc\/project_consortium\/","datePublished": "2025-03-27T00:00:00+00:00","dateModified": "2025-03-27T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "ZergFlood"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper" data-github-corner="right">
+    <div class="header-title">
+      <a href="/" title="Sky0x7d1"><span class="header-title-text">Sky0x7d1</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/">归档</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item">
+              <a class="menu-link" href="/me/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 关于我</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li><li class="menu-item language-switch auto d-none" aria-hidden="true">
+    <span role="button" aria-label="选择语言" title="选择语言"><i class="fa-solid fa-language fa-fw" aria-hidden="true"></i></span>
+    <ul class="sub-menu"><li class="menu-item active" data-type="artificial">
+          <a href="/posts/doc/project_consortium/" data-lang="zh-cn" class="menu-link text-secondary" title="">
+            <i class="fa-solid fa-person fa-fw fa-sm" aria-hidden="true"></i> </a>
+        </li><li class="menu-item-divider" aria-hidden="true"></li><li class="menu-item" data-type="machine">
+          <a data-lang="english" class="menu-link" title="English">
+            <i class="fa-solid fa-robot fa-fw fa-sm" aria-hidden="true"></i> English</a>
+        </li></ul>
+  </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Sky0x7d1"><span class="header-title-text">Sky0x7d1</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/">归档</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item"><a class="menu-link" href="/me/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 关于我</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span><span id="translate" class="menu-system-item language-switch auto d-none" aria-hidden="true">
+    <span role="button" aria-label="选择语言" title="选择语言" data-current=""><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i></span>
+  </span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>基于联盟链虚拟财产跨平台交易架构</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img loading="lazy" src="/img/profile1.png" alt="ZergFlood" data-title="ZergFlood" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;ZergFlood</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category" title="分类 - 项目"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 项目</a></span></div><div class="post-meta-line"><span title="发布于 2025-03-27 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-03-27">2025-03-27</time></span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#背景">背景</a></li>
+    <li><a href="#项目展示">项目展示</a>
+      <ul>
+        <li><a href="#工具类">工具类</a></li>
+        <li><a href="#web">Web</a></li>
+      </ul>
+    </li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="背景" class="heading-element"><span>背景</span>
+  <a href="#%e8%83%8c%e6%99%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>这个项目主要是区块链的练手项目，底层中实现了根据椭圆曲线密码学原理转化为base58编码的地址，交易及区块的序列化和反序列化，联盟链的共识协议，数据的持久化，文件的网络传输方法等等。后端使用的是python 3.9, Django 3.2.13，前端使用的是Vue3。其他框架使用较少，本项目主要以造轮子为主。</p>
+<p>为什么要做这个项目？最早接触区块链是因为阅读了一本书，O&rsquo;Reilly 的《programming bitcoin》。讲了如何使用python从底层实现比特币细节。后来我开始思考为什么区块链需要浪费算力挖矿，仔细分析矿工其实做了两件事情，一个是通过寻找一个哈希值证明它获得了区块奖励，另一个就是打包用户的交易保存在区块中。公有链是完全公开透明的，在不可信网络中达成这个目标唯一的方法就是算力竞争，即挖矿。如果有相对柔和的低算力共识算法，那么暴露在公网非常容易受到攻击，因为攻击者成本低了。我的想法是利用区块链的特点，做一个不需要大量算力挖矿的系统，这种方案只适合于联盟链。</p>
+<p>为什么需要联盟链？联盟链代表可信度高的几个节点组成的区块链，不对外开放。联盟链可以做很多定制化特性，一个简易的方案就是头部公司只需分配一块服务器保证其正常运行即可，其余时刻并不需要操作和管理，这好像是达成一个契约，只提供服务器做部署，不对内容做更改，所有数据流通过程序自动运转。理想的情况是政府相关部门也能加入节点监管，提高联盟链的可信度。</p>
+<p>头部公司和政府部门加入联盟链的动机是什么？我认为有两个好处，一个是通过提供联盟链服务收取交易的手续费，另一个是提升自身品牌信用。在商业活动中，我认为信用的价值比其研发产品的使用价值更大。对于政府部门来说，提供服务同时能够参与监管和审查，我想这也个也满足了需求。</p>
+<p>这个项目是短期个人创意想法，是否适用于现实场景还有待研究。</p>
+<h2 id="项目展示" class="heading-element"><span>项目展示</span>
+  <a href="#%e9%a1%b9%e7%9b%ae%e5%b1%95%e7%a4%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>这个系统的逻辑是启动两个进程，一个是django作为后端，另一个是自己编写了Zerg区块链程序作为链端核心。Zerg对外暴露两个端口，其中一个用于不同节点之间通信，例如广播交易，验证区块，共识协议验证等等，另一个端口和本地后端进行通信。使用的是原始TCP短连接的方式，原因是当时技术储备不足，实际应该使用gRPC和http方式更合理。</p>
+<h3 id="工具类" class="heading-element"><span>工具类</span>
+  <a href="#%e5%b7%a5%e5%85%b7%e7%b1%bb" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>首先我做了一个区块链工具，这个工具可以用来管理节点的公私钥，创建地址，创建交易序列。底层的算法原理和输入输出格式都与比特币一致，我在交易序列化的细节上做了些简易的处理，主要是通过数据结构转成json再转化为字节的形式。</p>
+<p>下面是生成公私钥的程序，因为使用联盟链，节点广播必须使用RSA加密和验证通信内容。点击生成公私钥后会生成两个文件，RSA_PIV，RSA_PUB。把PUB发送给其他节点的Key目录下就能启动共识算法中的验证步骤。</p>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block2.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block2.png?size=small" data-sub-html="<h2>图一</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block2.png" alt="图一" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block2.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block2.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block2.png?size=large 2x" data-title="图一" width="400" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<hr>
+<p>下面是生成地址的程序，类似与用户的区块链钱包。助记词只是影响随机数种子，并不能直接计算得到地址和私钥。完整的输入是加盐哈希，时间戳等信息组合得到的，并且这是离线计算，安全性完全可以保证。</p>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block1.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block1.png?size=small" data-sub-html="<h2>图二</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block1.png" alt="图二" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block1.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block1.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block1.png?size=large 2x" data-title="图二" width="400" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<hr>
+<p>下面是生成交易的程序，类似与用户的区块链钱包。这将会把交易信息序列化为一个长串数字，节点可以解析这串数字用于验证交易的合法性。用户的虚拟财产通过节点验证后会产生一个财产ID。如果一个区块链地址拥有这个财产ID，那么就会保存在数据库和区块链文件中。</p>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block3.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block3.png?size=small" data-sub-html="<h2>图三</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block3.png" alt="图三" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block3.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block3.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block3.png?size=large 2x" data-title="图三" width="400" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<h3 id="web" class="heading-element"><span>Web</span>
+  <a href="#web" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>下面两张图的界面显示的是用于节点公私钥管理和区块查询。每个虚拟财产都有一个认证节点用于溯源，认证的节点需要对虚拟财产的真实性和有效性负责。第二张图是区块链查询，显示的是已经由至少一个节点确认的交易。由于只是在测试，定义3个交易产出一个区块，当然区块的创建也可以设置时间定时产出。</p>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block4-1.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block4-1.png?size=small" data-sub-html="<h2>图4</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block4-1.png" alt="图4" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block4-1.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block4-1.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block4-1.png?size=large 2x" data-title="图4" width="800" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block5.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block5.png?size=small" data-sub-html="<h2>图5</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block5.png" alt="图5" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block5.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block5.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block5.png?size=large 2x" data-title="图5" width="800" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<hr>
+<p>这张图展示的是作为用户上传虚拟财产的功能，上传后将会把文件保存在节点的Temporary目录。</p>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block6.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block6.png?size=small" data-sub-html="<h2>图6</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block6.png" alt="图6" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block6.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block6.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block6.png?size=large 2x" data-title="图6" width="800" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<hr>
+<p>下面是管理员界面，管理员可以查看文件的合法性，如果点击接受，那么文件就会永久保存并且交易写入到区块。如果拒绝，那么临时文件区就会删除这个文件，同时给用户返回被拒绝的信息。第二张图界面供查看已经审核通过的虚拟财产。</p>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block7-1.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block7-1.png?size=small" data-sub-html="<h2>图7</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block7-1.png" alt="图7" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block7-1.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block7-1.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block7-1.png?size=large 2x" data-title="图7" width="800" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block8-1.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block8-1.png?size=small" data-sub-html="<h2>图8</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block8-1.png" alt="图8" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block8-1.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block8-1.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block8-1.png?size=large 2x" data-title="图8" width="800" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<hr>
+<p>下面的界面为用户交易的广播通道，这段交易十六进制编码存储了发送者地址，接受者地址，虚拟财产ID，发送者数字签名。序列号内容通过“钱包”生成而来。为什么要设计成这样，主要是因为参考了比特币最原始的广播交易网站。基于椭圆曲线密码学原理，离线签署数字签名，证明拥有者的数字财产。服务器节点接收这段代码后，会解码成完整的原始交易对象，首先验证这个地址是否拥有该数字资产，然后验证数字签名是否为此地址，所有的验证通过后则广播给其他节点，并存储在本地。</p>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=small" data-sub-html="<h2>图9</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png" alt="图9" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=large 2x" data-title="图9" width="800" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=small" data-sub-html="<h2>图10</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png" alt="图10" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=large 2x" data-title="图10" width="700" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<h2 id="总结" class="heading-element"><span>总结</span>
+  <a href="#%e6%80%bb%e7%bb%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>本人独立完成项目的所有内容，由于开发时间较短，部分功能与设计并不完善。项目的初衷是实现半匿名形式的交易平台，证明财产属权，例如游戏账号交易，各种具备价值的虚拟产品交易。如果交易者发生纠纷，那么平台承担证明者的职能，提供完整的法律证据支持，以解决互联网交易中的信任危机。不足之处在于开发时技术储备不足，没能提供一个类EVM来实现智能合约。至于为什么不做成一个公有链，有两个原因。第一，无挖矿（Pow）的公有链太脆弱极易遭受网络攻击，系统未必稳定运行。第二，没有找到矿工参与的激励机制，因为本质上系统不存在代币，只是现实中虚拟财产的映射。</p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2025-03-27 00:00:00">更新于 2025-03-27&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/" class="post-tag" title="标签 - 分布式系统">分布式系统</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/doc/eth/" class="post-nav-item" rel="prev" title="ETH搭建联盟链的方法"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>ETH搭建联盟链的方法</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><a href="https://github.com/CarelTian" title="Visit my GitHub profile"target="_blank" rel="external nofollow" class="github-corner right d-none-mobile"><svg viewBox="0 0 250 250" aria-hidden="true" width="56" height="56"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/js/flyfish.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"enable":false},"cse":{"gotoResultsPage":"前往搜索结果页面……","resultsPage":"/search/"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"cse"},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script><script src="/lib/translate.min.js" defer></script><script>window.ATConfig={"hugoLangCodes":["zh-cn"],"hugoLangMap":{"zh-cn":"/posts/doc/project_consortium/"}};</script><script src="/js/translate.fixit.min.js" defer></script></body>
+</html>
