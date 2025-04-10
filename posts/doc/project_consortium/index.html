@@ -18,7 +18,7 @@
   <meta itemprop="description" content="背景 这个项目主要是区块链的练手项目，底层中实现了根据椭圆曲线密码学原理转化为base58编码的地址，交易及区块的序列化和反序列化，联盟链的共识协议，数据的持久化，文件的网络传输方法等等。后端使用的是python 3.9, Django 3.2.13，前端使用的是Vue3。其他框架使用较少，本项目主要以造轮子为主。">
   <meta itemprop="datePublished" content="2025-03-27T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-03-27T00:00:00+00:00">
-  <meta itemprop="wordCount" content="25">
+  <meta itemprop="wordCount" content="27">
   <meta itemprop="keywords" content="分布式系统"><meta property="og:url" content="https://careltian.github.io/posts/doc/project_consortium/">
   <meta property="og:site_name" content="Sky0x7d1">
   <meta property="og:title" content="基于联盟链虚拟财产跨平台交易架构">
@@ -45,7 +45,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https:\/\/careltian.github.io\/posts\/doc\/project_consortium\/"
-    },"genre": "posts","keywords": "229, 136, 134, 229, 184, 131, 229, 188, 143, 231, 179, 187, 231, 187, 159","wordcount":  25 ,
+    },"genre": "posts","keywords": "229, 136, 134, 229, 184, 131, 229, 188, 143, 231, 179, 187, 231, 187, 159","wordcount":  27 ,
     "url": "https:\/\/careltian.github.io\/posts\/doc\/project_consortium\/","datePublished": "2025-03-27T00:00:00+00:00","dateModified": "2025-03-27T00:00:00+00:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -144,6 +144,7 @@
       <ul>
         <li><a href="#工具类">工具类</a></li>
         <li><a href="#web">Web</a></li>
+        <li><a href="#持久化">持久化</a></li>
       </ul>
     </li>
     <li><a href="#总结">总结</a></li>
@@ -194,6 +195,13 @@
 <p>下面的界面为用户交易的广播通道，这段交易十六进制编码存储了发送者地址，接受者地址，虚拟财产ID，发送者数字签名。序列号内容通过“钱包”生成而来。为什么要设计成这样，主要是因为参考了比特币最原始的广播交易网站。基于椭圆曲线密码学原理，离线签署数字签名，证明拥有者的数字财产。服务器节点接收这段代码后，会解码成完整的原始交易对象，首先验证这个地址是否拥有该数字资产，然后验证数字签名是否为此地址，所有的验证通过后则广播给其他节点，并存储在本地。</p>
 <figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=small" data-sub-html="<h2>图9</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png" alt="图9" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block9-1.png?size=large 2x" data-title="图9" width="800" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
 <figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=small" data-sub-html="<h2>图10</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png" alt="图10" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block10.png?size=large 2x" data-title="图10" width="700" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<hr>
+<h3 id="持久化" class="heading-element"><span>持久化</span>
+  <a href="#%e6%8c%81%e4%b9%85%e5%8c%96" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block11.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block11.png?size=small" data-sub-html="<h2>图10</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block11.png" alt="图10" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block11.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block11.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/block11.png?size=large 2x" data-title="图10" width="700" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<p>关于系统的持久化主要有两部分，一个是数据库上的存储，一个是区块文件的存储。为了确保后加入的节点能够快速同步到主链上，所以可以通过解析区块文件来填充数据库。在项目中设置了一个主节点，每隔10秒会向所有节点发送一致性检测请求。请求头包含区块文件数量，时间戳，请求体包含区块文件的哈希值。如果节点缺失部分区块文件，主节点会直接发送原始区块文件。目前只实现了基本的传输和检测功能，可优化的地方有很多，例如使用类似于默克尔树的结构，使用2的n次方数量检测合并的区块文件。减小主节点的网络I/O，可以使用对等节点传输文件。</p>
 <h2 id="总结" class="heading-element"><span>总结</span>
   <a href="#%e6%80%bb%e7%bb%93" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
