@@ -12,17 +12,17 @@
       }
     </style>
     <title>PostgreSQL - Sky0x7d1</title><meta name="author" content="ZergFlood">
-<meta name="description" content="PostgreSQL简介 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。
+<meta name="description" content="数据库实现 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。
 "><meta name="keywords" content='100, 97, 116, 97, 98, 97, 115, 101'>
   <meta itemprop="name" content="PostgreSQL">
-  <meta itemprop="description" content="PostgreSQL简介 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
+  <meta itemprop="description" content="数据库实现 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
   <meta itemprop="datePublished" content="2025-04-10T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-04-10T00:00:00+00:00">
   <meta itemprop="wordCount" content="581">
   <meta itemprop="keywords" content="Database"><meta property="og:url" content="https://careltian.github.io/posts/doc/postgresql/">
   <meta property="og:site_name" content="Sky0x7d1">
   <meta property="og:title" content="PostgreSQL">
-  <meta property="og:description" content="PostgreSQL简介 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
+  <meta property="og:description" content="数据库实现 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -32,7 +32,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="PostgreSQL">
-  <meta name="twitter:description" content="PostgreSQL简介 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
+  <meta name="twitter:description" content="数据库实现 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="img/profile1.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://careltian.github.io/posts/doc/postgresql/" title="PostgreSQL - Sky0x7d1" /><link rel="prev" type="text/html" href="https://careltian.github.io/posts/doc/project_consortium/" title="基于联盟链虚拟财产跨平台交易架构" /><link rel="alternate" type="text/markdown" href="https://careltian.github.io/posts/doc/postgresql/index.md" title="PostgreSQL - Sky0x7d1"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
@@ -139,7 +139,7 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#postgresql简介">PostgreSQL简介</a></li>
+    <li><a href="#数据库实现">数据库实现</a></li>
     <li><a href="#自定义类型">自定义类型</a></li>
     <li><a href="#多属性线性哈希文件">多属性线性哈希文件</a>
       <ul>
@@ -150,8 +150,8 @@
     </li>
   </ul>
 </nav></div>
-      </div><div class="content" id="content"><h2 id="postgresql简介" class="heading-element"><span>PostgreSQL简介</span>
-  <a href="#postgresql%e7%ae%80%e4%bb%8b" class="heading-mark">
+      </div><div class="content" id="content"><h2 id="数据库实现" class="heading-element"><span>数据库实现</span>
+  <a href="#%e6%95%b0%e6%8d%ae%e5%ba%93%e5%ae%9e%e7%8e%b0" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h2><p>PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。</p>

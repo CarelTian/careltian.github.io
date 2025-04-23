@@ -1,7 +1,7 @@
 # PostgreSQL
 
 
-## PostgreSQL简介
+## 数据库实现
 
 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。
 
