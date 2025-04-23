@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <style>
+      :root {
+        --background-light: url('/images/day.jpg');
+        --background-dark: url('/images/dark.jpg');
+      }
+    </style>
+    <title>PostgreSQL - Sky0x7d1</title><meta name="author" content="ZergFlood">
+<meta name="description" content="PostgreSQL简介 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。
+"><meta name="keywords" content='100, 97, 116, 97, 98, 97, 115, 101'>
+  <meta itemprop="name" content="PostgreSQL">
+  <meta itemprop="description" content="PostgreSQL简介 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
+  <meta itemprop="datePublished" content="2025-04-10T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-04-10T00:00:00+00:00">
+  <meta itemprop="wordCount" content="581">
+  <meta itemprop="keywords" content="Database"><meta property="og:url" content="https://careltian.github.io/posts/doc/postgresql/">
+  <meta property="og:site_name" content="Sky0x7d1">
+  <meta property="og:title" content="PostgreSQL">
+  <meta property="og:description" content="PostgreSQL简介 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-10T00:00:00+00:00">
+    <meta property="article:tag" content="Database">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PostgreSQL">
+  <meta name="twitter:description" content="PostgreSQL简介 PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="img/profile1.jpg"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://careltian.github.io/posts/doc/postgresql/" title="PostgreSQL - Sky0x7d1" /><link rel="prev" type="text/html" href="https://careltian.github.io/posts/doc/project_consortium/" title="基于联盟链虚拟财产跨平台交易架构" /><link rel="alternate" type="text/markdown" href="https://careltian.github.io/posts/doc/postgresql/index.md" title="PostgreSQL - Sky0x7d1"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "PostgreSQL",
+    "inLanguage": "zh-cn",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/careltian.github.io\/posts\/doc\/postgresql\/"
+    },"genre": "posts","keywords": "100, 97, 116, 97, 98, 97, 115, 101","wordcount":  581 ,
+    "url": "https:\/\/careltian.github.io\/posts\/doc\/postgresql\/","datePublished": "2025-04-10T00:00:00+00:00","dateModified": "2025-04-10T00:00:00+00:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "ZergFlood"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper" data-github-corner="right">
+    <div class="header-title">
+      <a href="/" title="Sky0x7d1"><span class="header-title-text">Sky0x7d1</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/">归档</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item">
+              <a class="menu-link" href="/me/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 关于我</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li><li class="menu-item language-switch auto d-none" aria-hidden="true">
+    <span role="button" aria-label="选择语言" title="选择语言"><i class="fa-solid fa-language fa-fw" aria-hidden="true"></i></span>
+    <ul class="sub-menu"><li class="menu-item active" data-type="artificial">
+          <a href="/posts/doc/postgresql/" data-lang="zh-cn" class="menu-link text-secondary" title="">
+            <i class="fa-solid fa-person fa-fw fa-sm" aria-hidden="true"></i> </a>
+        </li><li class="menu-item-divider" aria-hidden="true"></li><li class="menu-item" data-type="machine">
+          <a data-lang="english" class="menu-link" title="English">
+            <i class="fa-solid fa-robot fa-fw fa-sm" aria-hidden="true"></i> English</a>
+        </li></ul>
+  </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Sky0x7d1"><span class="header-title-text">Sky0x7d1</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/">归档</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 目录</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item"><a class="menu-link" href="/me/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 关于我</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span><span id="translate" class="menu-system-item language-switch auto d-none" aria-hidden="true">
+    <span role="button" aria-label="选择语言" title="选择语言" data-current=""><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden="true"></i></span>
+  </span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>PostgreSQL</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img loading="lazy" src="/img/profile1.png" alt="ZergFlood" data-title="ZergFlood" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;ZergFlood</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category" title="分类 - 项目"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 项目</a></span></div><div class="post-meta-line"><span title="发布于 2025-04-10 00:00:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-04-10">2025-04-10</time></span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#postgresql简介">PostgreSQL简介</a></li>
+    <li><a href="#自定义类型">自定义类型</a></li>
+    <li><a href="#多属性线性哈希文件">多属性线性哈希文件</a>
+      <ul>
+        <li><a href="#多属性哈希的代码">多属性哈希的代码</a></li>
+        <li><a href="#查询选择和投影">查询（选择和投影）</a></li>
+        <li><a href="#线性哈希">线性哈希</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="postgresql简介" class="heading-element"><span>PostgreSQL简介</span>
+  <a href="#postgresql%e7%ae%80%e4%bb%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>PostgreSQL 是一款高级企业级开源关系数据库，支持 SQL（关系型）和 JSON（非关系型）查询。它是一个高度稳定的数据库管理系统。PostgreSQL 可用作很多 Web、移动、地理空间和分析应用程序的主要数据存储或数据仓库。</p>
+<p>MySQL 和 PostgreSQL 都是热门的开源关系数据库。从传统意义上说，我们认为 MySQL 比较易用且速度快，而 PostgreSQL 的功能比较丰富，并且与 Oracle 等商业数据库的兼容性更好。</p>
+<p>仓库：<a href="https://github.com/CarelTian/database-Impl"target="_blank" rel="external nofollow noopener noreferrer">https://github.com/CarelTian/database-Impl</a></p>
+<h2 id="自定义类型" class="heading-element"><span>自定义类型</span>
+  <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%b1%bb%e5%9e%8b" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>相比较于Mysql，postgresql可以有自定义类型，更灵活的扩展函数机制。下面的例子中将展示在数据库中新建一个地址类型。并且支持地址类型的索引，自定义比较，格式化输出。下图展示的是BNF	定义格式。一个地址应该由4 部分组成: DetailedUnitRoad, Suburb, State and Postcode，例如
+U19/36 Queen Ave, Southgate, AR 7279</p>
+<figure style="text-align: center;"><a class="lightgallery" href="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/postsql-1.png?size=large" data-thumbnail="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/postsql-1.png?size=small" data-sub-html="<h2>图一</h2>"><img loading="lazy" src="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/postsql-1.png" alt="图一" srcset="https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/postsql-1.png?size=small, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/postsql-1.png?size=medium 1.5x, https://raw.githubusercontent.com/CarelTian/MyStatic/master/images/postsql-1.png?size=large 2x" data-title="图一" width="400" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a></figure>
+<p>由于地址是不定长的，在postadd.source中定义VARIABLE，输入输出函数，对齐方式为int4，这个参数可从官方文档的建议中找到。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="n">postaddress</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">internallength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">VARIABLE</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">postaddress_in</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="k">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">postaddress_out</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">alignment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">int4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">-- storage = extended  天坑，加了这东西改bug 3个小时
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>下面是结构体定义，一个tuple字段都保存在data中，我们在结构体定义每个字段长度用于分隔。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">PostAddress</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">int32</span> <span class="n">vl_len_</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">int32</span> <span class="n">unit_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">int32</span> <span class="n">street_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">int32</span> <span class="n">suburb_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">int32</span> <span class="n">state_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">int32</span> <span class="n">postcode_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">int32</span> <span class="n">original_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span>  <span class="n">data</span><span class="p">[</span><span class="n">FLEXIBLE_ARRAY_MEMBER</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="n">PostAddress</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>下面的代码是读取和序列号地址，这里使用了按照规则严格匹配的方法，代码冗长较难维护，但是好在通过了全部测试。还有一种方法是使用正则表达式来解析字符串，代码量和可读性都会好很多。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">PG_FUNCTION_INFO_V1</span><span class="p">(</span><span class="n">postaddress_in</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Datum</span>
+</span></span><span class="line"><span class="cl"><span class="nf">postaddress_in</span><span class="p">(</span><span class="n">PG_FUNCTION_ARGS</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span>  <span class="o">*</span><span class="n">str</span> <span class="o">=</span> <span class="nf">PG_GETARG_CSTRING</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">PostAddress</span> <span class="o">*</span><span class="n">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">int32</span> <span class="n">struct_size</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="o">*</span><span class="n">unit</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">,</span><span class="o">*</span><span class="n">street</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">,</span><span class="o">*</span><span class="n">suburb</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">,</span><span class="o">*</span><span class="n">state</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">,</span><span class="o">*</span><span class="n">postcode</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">,</span><span class="o">*</span><span class="n">original</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="o">*</span><span class="n">t</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">unit_len</span><span class="p">,</span> <span class="n">street_len</span><span class="p">,</span><span class="n">suburb_len</span><span class="p">,</span><span class="n">state_len</span><span class="p">,</span><span class="n">postcode_len</span><span class="p">,</span><span class="n">original_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="o">*</span><span class="n">value</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span> <span class="nf">palloc</span><span class="p">(</span><span class="n">len</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>  
+</span></span><span class="line"><span class="cl">    <span class="nf">strcpy</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">value</span><span class="p">[</span><span class="n">len</span><span class="p">]</span><span class="o">=</span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">original</span><span class="o">=</span><span class="n">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">t</span> <span class="o">=</span> <span class="nf">strtok</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&#34;,&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">t</span><span class="o">==</span><span class="nb">NULL</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">ereport</span><span class="p">(</span><span class="n">ERROR</span><span class="p">,</span><span class="nf">errmsg</span><span class="p">(</span><span class="s">&#34;invalid input syntax for type PostAddress: </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span><span class="n">original</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="o">*</span><span class="n">slash</span> <span class="o">=</span> <span class="nf">strchr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="sc">&#39;/&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">slash</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nf">check_street</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl">		<span class="nf">ereport</span><span class="p">(</span><span class="n">ERROR</span><span class="p">,</span><span class="nf">errmsg</span><span class="p">(</span><span class="s">&#34;invalid input syntax for type PostAddress: </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span><span class="n">original</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">		<span class="n">t</span><span class="o">=</span><span class="nf">to_lower</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">street</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="o">*</span><span class="n">slash</span><span class="o">=</span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nf">check_unit</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">||</span> <span class="o">!</span><span class="nf">check_street</span><span class="p">(</span><span class="n">slash</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">ereport</span><span class="p">(</span><span class="n">ERROR</span><span class="p">,</span><span class="nf">errmsg</span><span class="p">(</span><span class="s">&#34;invalid input syntax for type PostAddress: </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span><span class="n">original</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">char</span> <span class="o">*</span> <span class="n">s</span><span class="o">=</span><span class="n">slash</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">t</span><span class="o">=</span><span class="nf">to_lower</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">s</span><span class="o">=</span><span class="nf">to_lower</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">unit</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">street</span><span class="o">=</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">t</span> <span class="o">=</span> <span class="nf">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">&#34;,&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">t</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">ereport</span><span class="p">(</span><span class="n">ERROR</span><span class="p">,</span><span class="nf">errmsg</span><span class="p">(</span><span class="s">&#34;invalid input syntax for type PostAddress: </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span><span class="n">original</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nf">check_suburb</span><span class="p">(</span><span class="n">t</span><span class="p">)){</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">ereport</span><span class="p">(</span><span class="n">ERROR</span><span class="p">,</span><span class="nf">errmsg</span><span class="p">(</span><span class="s">&#34;invalid input syntax for type PostAddress: </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span><span class="n">original</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">t</span><span class="o">=</span><span class="nf">to_lower</span><span class="p">(</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>  <span class="c1">//skip space
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">suburb</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">t</span> <span class="o">=</span> <span class="nf">strtok</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="s">&#34;&gt;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">t</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">||</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39; &#39;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">ereport</span><span class="p">(</span><span class="n">ERROR</span><span class="p">,</span><span class="nf">errmsg</span><span class="p">(</span><span class="s">&#34;invalid input syntax for type PostAddress: </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span><span class="n">original</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">t</span><span class="o">=</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="c1">//skip space
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">slash</span><span class="o">=</span><span class="nf">strchr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="sc">&#39; &#39;</span><span class="p">);</span>   
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="n">slash</span><span class="o">==</span><span class="nb">NULL</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">ereport</span><span class="p">(</span><span class="n">ERROR</span><span class="p">,</span><span class="nf">errmsg</span><span class="p">(</span><span class="s">&#34;invalid input syntax for type PostAddress: </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span><span class="n">original</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="o">*</span><span class="n">slash</span><span class="o">=</span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nf">check_state</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="nf">check_postcode</span><span class="p">(</span><span class="n">slash</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">ereport</span><span class="p">(</span><span class="n">ERROR</span><span class="p">,</span><span class="nf">errmsg</span><span class="p">(</span><span class="s">&#34;invalid input syntax for type PostAddress: </span><span class="se">\&#34;</span><span class="s">%s</span><span class="se">\&#34;</span><span class="s">&#34;</span><span class="p">,</span><span class="n">original</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">char</span> <span class="o">*</span> <span class="n">s</span><span class="o">=</span><span class="n">slash</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">t</span><span class="o">=</span><span class="nf">to_lower</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">s</span><span class="o">=</span><span class="nf">to_lower</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="n">state</span><span class="o">=</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">postcode</span><span class="o">=</span><span class="n">slash</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">unit_len</span> <span class="o">=</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">unit</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">street_len</span><span class="o">=</span><span class="nf">strlen</span><span class="p">(</span><span class="n">street</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">suburb_len</span><span class="o">=</span><span class="nf">strlen</span><span class="p">(</span><span class="n">suburb</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">state_len</span><span class="o">=</span><span class="nf">strlen</span><span class="p">(</span><span class="n">state</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">postcode_len</span><span class="o">=</span><span class="nf">strlen</span><span class="p">(</span><span class="n">postcode</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">original_len</span><span class="o">=</span><span class="nf">strlen</span><span class="p">(</span><span class="n">original</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">struct_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">int32</span><span class="p">)(</span><span class="nf">offsetof</span><span class="p">(</span><span class="n">PostAddress</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="o">+</span> <span class="n">unit_len</span><span class="o">+</span><span class="n">street_len</span><span class="o">+</span><span class="n">suburb_len</span><span class="o">+</span><span class="n">state_len</span><span class="o">+</span><span class="n">postcode_len</span><span class="o">+</span><span class="n">original_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">PostAddress</span> <span class="o">*</span><span class="p">)</span> <span class="nf">palloc</span><span class="p">(</span><span class="n">struct_size</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">SET_VARSIZE</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">struct_size</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">	<span class="n">result</span><span class="o">-&gt;</span><span class="n">unit_len</span> <span class="o">=</span> <span class="n">unit_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">result</span><span class="o">-&gt;</span><span class="n">street_len</span>   <span class="o">=</span> <span class="n">street_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span><span class="o">-&gt;</span><span class="n">suburb_len</span>   <span class="o">=</span> <span class="n">suburb_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span><span class="o">-&gt;</span><span class="n">state_len</span>    <span class="o">=</span> <span class="n">state_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span><span class="o">-&gt;</span><span class="n">postcode_len</span> <span class="o">=</span> <span class="n">postcode_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">result</span><span class="o">-&gt;</span><span class="n">original_len</span><span class="o">=</span><span class="n">original_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">memcpy</span><span class="p">(</span><span class="n">result</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">unit</span><span class="p">,</span> <span class="n">unit_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">+=</span> <span class="n">unit_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">memcpy</span><span class="p">(</span><span class="n">result</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">street</span><span class="p">,</span> <span class="n">street_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">+=</span> <span class="n">street_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">memcpy</span><span class="p">(</span><span class="n">result</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">suburb</span><span class="p">,</span> <span class="n">suburb_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">+=</span> <span class="n">suburb_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nf">memcpy</span><span class="p">(</span><span class="n">result</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">state_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">+=</span> <span class="n">state_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">    <span class="nf">memcpy</span><span class="p">(</span><span class="n">result</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">postcode</span><span class="p">,</span> <span class="n">postcode_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">+=</span> <span class="n">postcode_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">memcpy</span><span class="p">(</span><span class="n">result</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">original</span><span class="p">,</span> <span class="n">original_len</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">offset</span> <span class="o">+=</span> <span class="n">postcode_len</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nf">PG_RETURN_POINTER</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>还实现地址排序比较，索引，获取细分字段（如街道，州，邮编）可参考仓库代码。</p>
+<h2 id="多属性线性哈希文件" class="heading-element"><span>多属性线性哈希文件</span>
+  <a href="#%e5%a4%9a%e5%b1%9e%e6%80%a7%e7%ba%bf%e6%80%a7%e5%93%88%e5%b8%8c%e6%96%87%e4%bb%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>这个部分与postgresql不相关，只使用C来实现这个功能。</p>
+<h3 id="多属性哈希的代码" class="heading-element"><span>多属性哈希的代码</span>
+  <a href="#%e5%a4%9a%e5%b1%9e%e6%80%a7%e5%93%88%e5%b8%8c%e7%9a%84%e4%bb%a3%e7%a0%81" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><div class="highlight" data-open="true"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Bits</span> <span class="nf">tupleHash</span><span class="p">(</span><span class="n">Reln</span> <span class="n">r</span><span class="p">,</span> <span class="n">Tuple</span> <span class="n">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">MAXBITS</span><span class="o">+</span><span class="mi">5</span><span class="p">];</span>  <span class="c1">//*** for debug
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">Count</span> <span class="n">nvals</span> <span class="o">=</span> <span class="nf">nattrs</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">char</span> <span class="o">**</span><span class="n">vals</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="n">nvals</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">assert</span><span class="p">(</span><span class="n">vals</span> <span class="o">!=</span> <span class="nb">NULL</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">tupleVals</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">vals</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Bits</span> <span class="o">*</span><span class="n">hash</span> <span class="o">=</span> <span class="nf">malloc</span><span class="p">(</span><span class="n">nvals</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">Bits</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="n">Bits</span> <span class="n">comphash</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nvals</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">hash</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nf">hash_any</span><span class="p">((</span><span class="kt">unsigned</span> <span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">vals</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nf">strlen</span><span class="p">(</span><span class="n">vals</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">bitsString</span><span class="p">(</span><span class="n">hash</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">buf</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">//  printf(&#34;hash(%s) = %s\n&#34;, vals[i], buf);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ChVecItem</span> <span class="o">*</span><span class="n">cv</span><span class="o">=</span>  <span class="nf">chvec</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXCHVEC</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">index</span><span class="o">=</span><span class="n">cv</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">att</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kt">int</span> <span class="n">pos</span><span class="o">=</span><span class="n">cv</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">bit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Bits</span> <span class="n">bit</span><span class="o">=</span> <span class="p">(</span><span class="n">hash</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&gt;&gt;</span> <span class="n">pos</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">comphash</span> <span class="o">|=</span><span class="p">(</span><span class="n">bit</span> <span class="o">&lt;&lt;</span><span class="n">i</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">bitsString</span><span class="p">(</span><span class="n">comphash</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//printf(&#34;compHash: %s\n&#34;,buf);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">freeVals</span><span class="p">(</span><span class="n">vals</span><span class="p">,</span><span class="n">nvals</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">comphash</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="查询选择和投影" class="heading-element"><span>查询（选择和投影）</span>
+  <a href="#%e6%9f%a5%e8%af%a2%e9%80%89%e6%8b%a9%e5%92%8c%e6%8a%95%e5%bd%b1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>主要是模拟PostgreSQL的查询方式，数据库输入的每条记录对应于一条tuple，多个tuple存储在page中。每插入一个tuple，取低位的哈希值作为桶的序号插入到对应的page。所以每当查询时，就可以计算查询字符串的哈希来确定对应的桶。对于使用模糊查询，相对应的哈希位使用特殊处理的方式，即扫描所有未知哈希位的桶号。由于tuple在page中是无序连续存储的，所以并不知道具体存在page的位置编号，因此可以全部遍历所有tuple，比较是否与查询字符串匹配。投影就比较简单，知道了数据类型的结构，将存储的字符串转化为字符数组就很容易处理。</p>
+<h3 id="线性哈希" class="heading-element"><span>线性哈希</span>
+  <a href="#%e7%ba%bf%e6%80%a7%e5%93%88%e5%b8%8c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>除了普通的page，还有溢出页。如果低位哈希值总是停留在少数的几个桶，那么溢出页就会越来越长，导致查询的效率降低，所以引入了分裂的概念。定义page的容量 c = floor(B/R) ≈ 1024/(10*n)，如果n=3, 那么每插入34个记录，就要对桶进行分裂操作，这里需要使用分裂指针表示即将分裂的桶。当sp = 2^d 时，d+1，sp置0。使用非常巧妙的位扩容机制来扩大深度。发生扩容时，sp指向的桶及其溢出页清空，其值保存在临时tuple数组中，然后创建一个新页，也是根据低位哈希将tuple分配在这两个桶中。以此反复，page保存的值会更加分散，能够更快的查询。</p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2025-04-10 00:00:00">更新于 2025-04-10&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/database/" class="post-tag" title="标签 - Database">Database</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/doc/project_consortium/" class="post-nav-item" rel="prev" title="基于联盟链虚拟财产跨平台交易架构"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>基于联盟链虚拟财产跨平台交易架构</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><a href="https://github.com/CarelTian" title="Visit my GitHub profile"target="_blank" rel="external nofollow" class="github-corner right d-none-mobile"><svg viewBox="0 0 250 250" aria-hidden="true" width="56" height="56"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/js/flyfish.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"enable":false},"cse":{"gotoResultsPage":"前往搜索结果页面……","resultsPage":"/search/"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":30,"type":"cse"},"version":"v0.3.17-8b402129"};</script><script src="/js/theme.min.js" defer></script><script src="/lib/translate.min.js" defer></script><script>window.ATConfig={"hugoLangCodes":["zh-cn"],"hugoLangMap":{"zh-cn":"/posts/doc/postgresql/"}};</script><script src="/js/translate.fixit.min.js" defer></script></body>
+</html>
